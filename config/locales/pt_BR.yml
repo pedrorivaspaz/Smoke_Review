@@ -1,0 +1,23 @@
+pt-BR:
+  current_locale: "Português do Brasil"
+  welcome: "Seja Bem-Vindo!"
+  messages:
+    welcome: "Este é o Smoke Review, uma app para você cadastrar e acompanhar os seus reviews."
+    menu: "Para começar, selecione uma das opções abaixo:"
+    confirm: "Tem certeza?"
+  hello: "Olá Mundo!"
+  links:
+    edit: "Editar"
+    show: "Mostrar"
+    delete: "Apagar"
+    new: "Novo"
+    back: "Voltar"
+  new:
+    pod: "Novo Pod"
+    brand: "Nova Marca"
+  editing:
+    pod: "Editando Pod"
+    brand: "Editando Marca"
+  showing:
+    pod: "Mostrando Pod"
+    brand: "Mostrando Marca"

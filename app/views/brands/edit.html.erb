@@ -1,0 +1,5 @@
+<h1><%= t('editing.brand') %></h1>
+
+<%= render 'form', brand: @brand %>
+<%= link_to t('links.show'), @brand, class:"btn btn-primary" %> |
+<%= link_to t('links.back'), brands_path, class:"btn btn-primary" %>

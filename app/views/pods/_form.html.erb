@@ -1,0 +1,39 @@
+<%= form_with(model: pod, local: true) do |form| %>
+  <% if pod.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pod.errors.count, "error") %> prohibited this pod from being saved:</h2>
+
+      <ul>
+      <% pod.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :brand_id %>
+    <%= form.select("brand_id", @brand_options, { include_blank: 'Selecione...' }, class:"form-control") %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :flavor %>
+    <%= form.text_field :flavor, class:"form-control", placeholder:"Green Apple" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_field :description, class:"form-control", placeholder:"Ainda não experimentei" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :url_image %>
+    <%= form.text_field :url_image, class:"form-control", placeholder:"https://cdn.awsli.com.br/800x800/1992/1992401/produto/215273643/952705-027rkeupw3.jpg" %>
+  </div>
+  
+
+
+  <div class="actions">
+    <%= form.submit nil, class:"btn btn-primary"  %>
+  </div>
+<% end %>

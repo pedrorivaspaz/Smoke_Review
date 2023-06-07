@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= Brand.model_name.human(count: @brands.count) %></h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><%= @brands.human_attribute_name(:description) %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @brands.each do |brand| %>
+      <tr>
+        <td><%= brand.description %></td>
+        <td><%= link_to t('links.show'), brand %></td>
+        <td><%= link_to t('links.edit'), edit_brand_path(brand) %></td>
+        <td><%= link_to t('links.delete'), brand, method: :delete, data: { confirm: t('messages.confirm') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('new.brand'), new_brand_path, class:"btn btn-primary" %>

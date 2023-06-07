@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= Pod.model_name.human(count: @pods.count) %></h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><%= @pods.human_attribute_name(:brand)%></th>
+      <th><%= @pods.human_attribute_name(:flavor) %></th>
+      <th><%= @pods.human_attribute_name(:url_image) %></th>
+      <th><%= @pods.human_attribute_name(:description) %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pods.each do |pod| %>
+      <tr>
+        <td><%= pod.brand.description %></td>
+        <td><%= pod.flavor %></td>
+        <%if pod.url_image %>
+          <td><%= image_tag pod.url_image, size: "75x65" %> </td>
+        <%end%>  
+        <td><%= pod.description %></td>
+        <td><%= link_to t('links.show'), pod %></td>
+        <td><%= link_to t('links.edit'), edit_pod_path(pod) %></td>
+        <td><%= link_to t('links.delete'), pod, method: :delete, data: { confirm: t('messages.confirm') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('new.pod'), new_pod_path, class:"btn btn-primary" %>

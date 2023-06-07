@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<form>
+
+  <div class="form-group">
+    <%= label_tag nil, @brand.class.human_attribute_name(:description) %>
+    <%= text_field_tag nil, @brand.description, class:"form-control", disabled: true %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag nil, @brand.class.human_attribute_name(:acronym) %>
+    <%= text_field_tag nil, @brand.acronym, class:"form-control", disabled: true %>
+  </div>
+  
+</form>
+
+<%= link_to t('links.edit'), edit_brand_path(@brand), class:"btn btn-primary" %> |
+<%= link_to t('links.back'), brands_path, class:"btn btn-primary" %>

@@ -1,0 +1,24 @@
+'pt-BR':
+  activerecord:
+    models:
+      pod: 
+        one: Pod
+        other: Pods
+      brand: 
+        one: Marca
+        other: Marcas
+    attributes:
+      pod:
+        id: Código
+        flavor: Sabor
+        description: Descrição
+        url_image: Imagem
+        brand: Marca
+        brand_id: Marca
+        updated_at: Atualizado em
+        created_at: Criado em
+      brand:
+        id: Código
+        description: Descrição
+        updated_at: Atualizado em
+        created_at: Criado em

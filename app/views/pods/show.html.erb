@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<form>
+
+  <div class="form-group">
+    <%= label_tag nil, @pod.class.human_attribute_name(:brand) %>
+    <%= text_field_tag nil, @pod.brand.description, class:"form-control", disabled: true %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag nil, @pod.class.human_attribute_name(:flavor) %>
+    <%= text_field_tag nil, @pod.flavor, class:"form-control", disabled: true %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag nil, @pod.class.human_attribute_name(:description) %>
+    <%= text_field_tag nil,@pod.description , class:"form-control", disabled: true %>
+  </div>
+  
+  <div class="form-group">
+    <%= label_tag nil, @pod.class.human_attribute_name(:url_image) %>
+    <%= text_field_tag nil, @pod.url_image , class:"form-control", disabled: true %>
+  </div>
+  
+</form>
+
+<%= link_to t('links.edit'), edit_pod_path(@pod), class:"btn btn-primary" %> |
+<%= link_to t('links.back'), pods_path, class:"btn btn-primary" %>
