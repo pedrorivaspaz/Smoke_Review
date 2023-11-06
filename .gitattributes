@@ -7,3 +7,5 @@ db/schema.rb linguist-generated
 vendor/* linguist-vendored
 
 *.html linguist-language=Ruby
+*.css linguist-language=Ruby
+
